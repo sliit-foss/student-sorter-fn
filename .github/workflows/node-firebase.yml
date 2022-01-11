@@ -1,0 +1,7 @@
+jobs:
+  build:
+    uses: sliit-foss/fcsc-web/.github/workflows/node.js.yml@5f6e99792aec745fdccea9bafc4f2cb93f0a31b3
+  firebase-deploy:
+    uses: sliit-foss/fcsc-web/.github/workflows/firebase-deploy.yaml@5f6e99792aec745fdccea9bafc4f2cb93f0a31b3
+    secrets:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
