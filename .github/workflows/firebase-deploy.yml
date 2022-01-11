@@ -5,6 +5,6 @@ on:
 
 jobs:
   firebase-deploy:
-    uses: sliit-foss/fcsc-web/.github/workflows/firebase-deploy.yaml@5f6e99792aec745fdccea9bafc4f2cb93f0a31b3
+    uses: sliit-foss/fcsc-web/.github/workflows/firebase-deploy.yaml@0cd5415e613f430cc831ff2b9e70c7a8f1927829
     secrets:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

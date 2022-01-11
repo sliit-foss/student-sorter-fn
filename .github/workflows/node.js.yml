@@ -4,4 +4,4 @@ on:
 
 jobs:
   build:
-    uses: sliit-foss/fcsc-web/.github/workflows/node.js.yml@5f6e99792aec745fdccea9bafc4f2cb93f0a31b3
+    uses: sliit-foss/fcsc-web/.github/workflows/node.js.yml@0cd5415e613f430cc831ff2b9e70c7a8f1927829
