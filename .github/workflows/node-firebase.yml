@@ -1,4 +1,12 @@
 on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    uses: sliit-foss/fcsc-web/.github/workflows/node.js.yml@5f6e99792aec745fdccea9bafc4f2cb93f0a31b3
+
+on:
   push:
     branches:
       - main
