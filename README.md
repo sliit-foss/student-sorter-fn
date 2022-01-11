@@ -3,4 +3,4 @@
 1. Fork the repository
 2. Clone the repository
 #
-[CodeTime]git clone https://github.com/<YOUR_USERNAME>/sliitfoss.git
+git clone [CodeTime](https://github.com/<YOUR_USERNAME>/sliitfoss.git)
