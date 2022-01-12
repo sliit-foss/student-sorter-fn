@@ -11,5 +11,4 @@
 > > git commit -m "<Commit message>"
 6. Push Changes
 > git push --set-upstream origin feature/<BRANCH_NAME>
-7. Make a Pull Request. See the guide for more details [Link] (https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-  
+7. Make a Pull Request. See the guide for more details Link [Link](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
