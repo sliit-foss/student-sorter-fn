@@ -1,4 +1,4 @@
-import { excelIcon, fileUploadIcon } from "../../assets/icons";
+import { excelIcon, fileUploadIcon } from "../../assets";
 import styles from "./DragAndDropSection.module.css";
 import React, {useState} from 'react'
 import Image from "next/image";

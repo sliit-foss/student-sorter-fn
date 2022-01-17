@@ -9,6 +9,8 @@
     border: 1px solid rgb(170, 170, 170);
     outline: 1px solid rgb(170, 170, 170);
     outline-offset: 8px;
+    background-image: url("../../assets/images/file-drop-area-bg.jpg");
+    background-size: contain;
 }
 
 .dropSection h1{
