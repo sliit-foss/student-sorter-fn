@@ -8,7 +8,7 @@ const DragAndDropSection = () => {
         <div className={styles.dropSectionInner}>
           <header>Upload Your Excel Sheet</header>
           {/* <img src={excelIcon} /> */}
-          <input type="file" className={styles.dropSectionInput} />
+          <input type="file" />
         </div>
       </div>
     </>
