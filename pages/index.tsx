@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
   return (
 
-    <div className={styles.container}>
+    <div>
        <Head>
          <title>Student Sorter</title>
          <link rel="icon" href="/favicon.ico" />
