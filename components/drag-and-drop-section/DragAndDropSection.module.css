@@ -13,12 +13,12 @@
 
 .dropSection input[type=file] {
     position: absolute;
-    height: 40vh;
-    width: 80vw;
     top: 4rem;
     left: 6rem;
     right: 0;
     bottom: 0;
     opacity: 0;
+    height: 40vh;
+    width: 80vw;
     cursor: pointer;
 }
