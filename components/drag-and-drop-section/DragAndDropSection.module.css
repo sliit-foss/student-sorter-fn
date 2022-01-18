@@ -1,53 +1,20 @@
-.dropSection{
-    height: 25vh;
-    width: 80%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgb(170, 170, 170);
-    outline: 1px solid rgb(170, 170, 170);
-    outline-offset: 8px;
-    background-image: url("../../assets/images/file-drop-area-bg.jpg");
-    background-size: contain;
-}
-
-.dropSection h1{
-    font-size: large;
-    margin: 0px 0px 5px 0px;
-    color: rgb(104, 104, 104);
-    font-weight: bold;
-}
-
-.dropSection p{
-    font-size: medium;
-    margin: 0px 0px 5px 0px;
-    color: rgb(104, 104, 104);
-}
-
 .dropSectionInner{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 20px 10px;
     width: 60vw;
-    height: 80%;
     background-color: white;
     border-radius: 20px;
     border: 3px dotted rgb(146, 141, 141);
 }
 
-.dropSection input[type=file] {
+.dropSectionInner input[type=file] {
     position: absolute;
-    top: 10vh;
-    left: 0px;
-    right: 0;
-    bottom: 0;
     opacity: 0;
-    height: 25vh;
+    height: 150px;
     width: 100%;
     cursor: pointer;
     overflow: hidden;
