@@ -1,0 +1,21 @@
+.dropSectionInner{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 10px;
+    width: 60vw;
+    background-color: white;
+    border-radius: 20px;
+    border: 3px dotted rgb(146, 141, 141);
+}
+
+.dropSectionInner input[type=file] {
+    position: absolute;
+    opacity: 0;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}

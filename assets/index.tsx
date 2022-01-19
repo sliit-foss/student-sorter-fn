@@ -1,0 +1,1 @@
+export {default as fileDropBG} from "./images/file-drop-area-bg.jpg"
