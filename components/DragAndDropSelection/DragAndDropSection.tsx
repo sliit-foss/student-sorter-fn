@@ -1,7 +1,6 @@
 import { CloudUploadIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import styles from "./DragAndDropSection.module.css";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import { Button, Input } from "..";
 
 const DragAndDropSection = () => {
