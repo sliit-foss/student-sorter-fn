@@ -73,11 +73,11 @@ const DragAndDropSection = () => {
           </span>
         </div>
       ) : null}
-      <div className="my-4 w-1/3 gap-4 flex flex-row justify-center">
+      <div className="my-4 w-full md:w-1/3 gap-4 flex flex-col md:flex-row justify-center">
         {/* Drop Down */}
         <Input type="number" value={numGroups} onChange={(e) => setNumGroups(e.target.value)} min={1} placeHolder="Group into" padding="px-3 py-2" />
         {/* Generate Button */}
-        <Button onClick={splitIntoGroups} value="Generate" width="w-1/3" padding="px-3 py-2" />
+        <Button onClick={splitIntoGroups} value="Generate" width="w-full md:w-1/3" padding="px-3 py-2" />
       </div>
     </>
   );

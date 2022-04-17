@@ -1,5 +1,6 @@
 module.exports = {
   darkMode: 'class',
+  important: true,
   content: [
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layout/**/*.{js,ts,jsx,tsx}",
@@ -15,12 +16,13 @@ module.exports = {
           hover: '#312e81',
         }
       },
+      width: {
+        '90vw': '90vw',
+      },
       minHeight: {
         '83vh': '83vh',
       }
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ]
+  plugins: []
 }
