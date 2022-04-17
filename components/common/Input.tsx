@@ -28,7 +28,7 @@ const Input = ({
             min={min}
             max={max}
             onChange={onChange}
-            className={`${padding} ${width} text-slate-700 border border-slate-200 outline-indigo-400 rounded-md`}
+            className={`${padding} ${width} text-slate-700 border border-slate-200 outline-indigo-400 rounded-md shadow-sm`}
             id={id}
             placeholder={placeHolder}
         />

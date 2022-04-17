@@ -1,5 +1,5 @@
 import { CloudUploadIcon, DocumentTextIcon } from "@heroicons/react/outline";
-import styles from "./DragAndDropSection.module.css";
+import styles from "./DragAndDropSection.module.scss";
 import React, { useState } from "react";
 import { Button, Input } from "..";
 
@@ -59,6 +59,7 @@ const DragAndDropSection = () => {
           onDragLeave={leave}
           onDrop={leave}
           type="file"
+          className={styles.dropSectionWidth}
           onChange={uploadFile}
         />
       </div>

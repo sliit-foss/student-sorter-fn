@@ -5,9 +5,22 @@ module.exports = {
     "./layout/**/*.{js,ts,jsx,tsx}",
     "./modules/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          base: '#3730a3',
+          hover: '#312e81',
+        }
+      },
+      minHeight: {
+        '83vh': '83vh',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ]
 }
