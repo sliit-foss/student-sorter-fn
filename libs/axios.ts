@@ -1,7 +1,15 @@
 import axios from 'axios'
 
-const axiosIns = axios.create({
-  baseURL: process.env.API_URL,
+const token = typeof window !== "undefined" ? window.localStorage.getItem('token') : ""
+
+export const axiosIns = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  headers: {
+    'Authorization': `Bearer ${token}`,
+  },
 })
 
-export default axiosIns
+export const setHeaders = (headers:any) => {
+  axiosIns.defaults.headers = headers
+}
+
