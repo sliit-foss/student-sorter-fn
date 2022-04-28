@@ -2,7 +2,7 @@ import { CloudUploadIcon, DocumentTextIcon } from "@heroicons/react/outline";
 import styles from "./DragAndDropSection.module.css";
 import React, { useState } from "react";
 import { Button, Input } from "..";
-
+import * as xlsx from "xlsx";
 const DragAndDropSection = () => {
   const acceptedFileTypes = ["xlsx", "xls", "csv"];
   const [studentFileDisplayName, setStudentFileDisplayName] = useState<
@@ -23,6 +23,9 @@ const DragAndDropSection = () => {
     if (acceptedFileTypes.includes(extension)) {
       setStudentFileDisplayName(filename);
       setFileTypeAlert(false);
+      console.log(e.target.files[0]);
+      readFile(e.target.files[0]);
+      
     } else {
       setFileTypeAlert(true);
     }
@@ -40,6 +43,34 @@ const DragAndDropSection = () => {
     // Grouping logic here
 
   }
+
+  const readFile = (file: File) => {
+
+    const promise = new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsArrayBuffer(file);
+
+      fileReader.onload = () => {
+        const bufferArray = fileReader.result as ArrayBuffer;
+
+        const workbook = xlsx.read(bufferArray, { type: "array" });
+        const wsname = workbook.SheetNames[0];
+        const ws = workbook.Sheets[wsname];
+        const data = xlsx.utils.sheet_to_csv(ws);
+        resolve(data);
+
+        const dataArray: Array = data.split(",");
+        return dataArray;
+      };
+      fileReader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  
+    promise.then((data: any) => {
+      console.log(data);
+    });
+  };
 
   return (
     <>
