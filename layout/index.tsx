@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <title>Student Sorter</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <main className="bg-slate-50 text-slate-900">
+            <main className="bg-slate-50 text-slate-900 pl-10 md:pl-16">
                 {children}
             </main>
         </>
