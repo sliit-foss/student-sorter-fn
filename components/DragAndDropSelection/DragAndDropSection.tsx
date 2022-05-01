@@ -1,8 +1,9 @@
-import { CloudUploadIcon, DocumentTextIcon } from "@heroicons/react/outline";
-import styles from "./DragAndDropSection.module.scss";
-import React, { useState } from "react";
-import { Button, Input } from "..";
+import React, { ChangeEvent, useState } from "react";
 import * as xlsx from "xlsx";
+import { Button, Input } from "..";
+import styles from "./DragAndDropSection.module.scss";
+import { CloudUploadIcon, DocumentTextIcon } from "@heroicons/react/outline";
+
 const DragAndDropSection = () => {
   const acceptedFileTypes = ["xlsx", "xls", "csv"];
   const [studentFileDisplayName, setStudentFileDisplayName] = useState<
@@ -14,20 +15,20 @@ const DragAndDropSection = () => {
   const [fileTypeAlert, setFileTypeAlert] = useState(false);
   const [numGroups, setNumGroups] = useState(1);
 
-  const uploadFile = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
-    setFileTypeAlert(false);
-    const filename = e.target.value.toString().split("\\").pop() || "";
-    const extension = filename.split(".").pop() || "";
-    if (acceptedFileTypes.includes(extension)) {
-      setStudentFileDisplayName(filename);
-      setFileTypeAlert(false);
-      console.log(e.target.files[0]);
-      readFile(e.target.files[0]);
-      
-    } else {
-      setFileTypeAlert(true);
+  const uploadFile = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?e.target.files[0]:null;
+    if (file) {
+      const fileName = file.name;
+      const fileType = fileName.split(".").pop();
+      if(!fileType)
+        return;
+      if (acceptedFileTypes.includes(fileType)) {
+        setStudentFileDisplayName(fileName);
+        setFileTypeAlert(false);
+        readFile(file);
+      } else {
+        setFileTypeAlert(true);
+      }
     }
   };
 
@@ -40,12 +41,10 @@ const DragAndDropSection = () => {
   };
 
   const splitIntoGroups = () => {
-    // Grouping logic here
-
+    // TODO:Grouping logic here
   }
 
   const readFile = (file: File) => {
-
     const promise = new Promise((resolve, reject) => {
       const fileReader = new FileReader();
       fileReader.readAsArrayBuffer(file);
@@ -59,7 +58,7 @@ const DragAndDropSection = () => {
         const data = xlsx.utils.sheet_to_csv(ws);
         resolve(data);
 
-        const dataArray: Array = data.split(",");
+        const dataArray = data.split(",");
         return dataArray;
       };
       fileReader.onerror = (error) => {
