@@ -66,10 +66,6 @@ const DragAndDropSection = () => {
         reject(error);
       };
     });
-  
-    promise.then((data: any) => {
-      console.log(data);
-    });
   };
 
   return (
