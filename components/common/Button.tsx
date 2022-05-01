@@ -18,7 +18,7 @@ const Button = ({
     return (
         <button
             onClick={onClick}
-            className={`${padding} ${width} ${radius} text-indigo-50 bg-indigo-800 hover:bg-indigo-900 outline-none rounded-md`}
+            className={`${padding} ${width} ${radius} text-indigo-50 bg-primary-base hover:bg-primary-hover outline-none rounded-md transition duration-200 shadow-sm`}
             type={type}>
             {value}
         </button>

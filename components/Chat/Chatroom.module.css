@@ -1,0 +1,11 @@
+.chatroom-area::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chatroom-area::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.chatroom-area::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(55, 48, 163, .3);
+}
